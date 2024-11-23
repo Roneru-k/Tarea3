@@ -56,6 +56,24 @@ namespace CALCULADORA
             operadorPresionado = false;
             textBox1.Text += boton.Text;
         }
+        
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            if (operadorPresionado || textBox1.Text == "7")
+                textBox1.Clear();
+            operadorPresionado = false;
+            textBox1.Text += boton.Text;
+        }
+        
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            if (operadorPresionado || textBox1.Text == "8")
+                textBox1.Clear();
+            operadorPresionado = false;
+            textBox1.Text += boton.Text;
+        }
 
         
 
