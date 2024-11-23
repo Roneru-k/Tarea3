@@ -75,6 +75,21 @@ namespace CALCULADORA
             textBox1.Text += boton.Text;
         }
 
-        
+                
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (!textBox1.Text.Contains("."))
+            {
+                if (textBox1.Text == "")
+                {
+                    textBox1.Text = "0.";
+                }
+                else
+                {
+                    textBox1.Text += ".";
+                }
+            }
+        }
+
 
         
