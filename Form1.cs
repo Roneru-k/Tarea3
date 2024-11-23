@@ -41,5 +41,22 @@ namespace CALCULADORA
         }
 
         
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "0"; 
+            valor = 0;
+            operacion = "";
+        }
+        
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            if (operadorPresionado || textBox1.Text == "6")
+                textBox1.Clear();
+            operadorPresionado = false;
+            textBox1.Text += boton.Text;
+        }
+
+        
 
         
