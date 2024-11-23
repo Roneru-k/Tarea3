@@ -90,6 +90,46 @@ namespace CALCULADORA
                 }
             }
         }
-
-
+       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            if (valor != 0)
+            {
+                Igual.PerformClick();
+                operadorPresionado = true;
+                operacion = boton.Text;
+            }
+            else
+            {
+                operacion = boton.Text;
+                valor = Double.Parse(textBox1.Text);
+                operadorPresionado = true;
+                textBox1.Clear();
+            }
+        }
         
+        private void button17_Click(object sender, EventArgs e)
+        {
+            switch (operacion)
+            {
+                case "+":
+                    textBox1.Text = (valor + Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "-":
+                    textBox1.Text = (valor - Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "*":
+                    textBox1.Text = (valor * Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "/":
+                    textBox1.Text = (valor / Double.Parse(textBox1.Text)).ToString();
+                    break;
+            }
+        
+            valor = Double.Parse(textBox1.Text);
+            operacion = "";
+        }
+        
+        
+                
