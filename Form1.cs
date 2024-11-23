@@ -132,4 +132,11 @@ namespace CALCULADORA
         }
         
         
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";  
+            valor = 0;
+            operacion = "";
+        }
+
                 
